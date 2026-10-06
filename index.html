@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="MOTIF is a visual index for finding images, places, and details worth keeping." />
+  <title>MOTIF — Visual Index</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="MOTIF home">
+      <span class="wordmark__symbol" aria-hidden="true">M</span>
+      <span>MOTIF</span>
+    </a>
+    <p class="header-note">A VISUAL INDEX FOR THE CURIOUS</p>
+    <span class="issue-mark"><span class="issue-mark__dot"></span> OPEN EDITION <span>NO. 01</span></span>
+  </header>
+
+  <main id="top">
+    <section class="search-intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow"><span>01</span> &nbsp; LOOK IT UP, THEN LOOK CLOSER</p>
+        <h1 id="page-title">Find your<br /><em>next point</em><br />of view.</h1>
+        <p class="tagline">A field guide to images, places, and the small details worth keeping.</p>
+      </div>
+
+      <div class="search-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow eyebrow--dark">START WITH A SUBJECT</p>
+            <h2>What are you looking for?</h2>
+          </div>
+          <span class="panel-index" aria-hidden="true">A / 01</span>
+        </div>
+
+        <form id="search-form" class="search-form">
+          <label class="sr-only" for="search-input">Search for images</label>
+          <input id="search-input" name="query" type="search" placeholder="Try: coastal gardens" autocomplete="off" />
+          <button id="search-button" class="search-button" type="button">Search <span aria-hidden="true">&#8599;</span></button>
+          <button id="clear-search" class="clear-button" type="reset" aria-label="Clear search">Clear</button>
+        </form>
+
+        <div class="quick-picks" aria-label="Suggested searches">
+          <span class="quick-picks__label">QUICK ROUTES</span>
+          <button type="button" class="suggestion">Botanical</button>
+          <button type="button" class="suggestion">Architecture</button>
+          <button type="button" class="suggestion">Street life</button>
+        </div>
+
+        <div class="search-footnote">
+          <span>PUBLIC IMAGE ARCHIVE</span>
+          <span>NO ACCOUNT NEEDED</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" aria-labelledby="gallery-title">
+      <div class="gallery-heading">
+        <div>
+          <p class="eyebrow">THE INDEX</p>
+          <h2 id="gallery-title">A window, not a wall.</h2>
+        </div>
+        <p id="result-count" class="result-count" aria-live="polite">Showing <strong>—</strong> images</p>
+      </div>
+
+      <div class="gallery-stage">
+        <div id="empty-state" class="empty-state">
+          <span class="empty-state__stamp" aria-hidden="true"><span></span></span>
+          <div>
+            <p class="empty-state__overline">YOUR CANVAS IS CLEAR</p>
+            <p class="empty-state__message">Search a subject to open the index.</p>
+            <p id="status" class="empty-state__hint" aria-live="polite">Your first collection will appear here.</p>
+          </div>
+          <span class="empty-state__coordinates" aria-hidden="true">40.7128 N<br />74.0060 W</span>
+        </div>
+        <section id="results" class="results-grid" aria-label="Image search results" aria-live="polite"></section>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>MOTIF / VISUAL INDEX</span>
+    <span>COLLECT WHAT CATCHES YOUR EYE</span>
+    <span>EST. FOR THE INQUISITIVE</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
